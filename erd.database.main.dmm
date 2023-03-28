@@ -1,0 +1,630 @@
+{
+	"tables": {
+		"c3f94e01-c64b-4c5d-9cbd-e4ff176bbb13": {
+			"id": "c3f94e01-c64b-4c5d-9cbd-e4ff176bbb13",
+			"visible": true,
+			"name": "users",
+			"desc": "Dies ist die Benutzertabelle, hier werden alle registrierten Kunden gespeichert.",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "65b27b75-46d7-4716-beac-371de3bc7e6c",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"param": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "0a8bd03f-eee4-40bc-a0d1-1b71bceb53f0",
+					"name": "uid",
+					"datatype": "varchar",
+					"param": "36",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "36e1e926-d384-486f-aaf0-031527a9f9aa",
+					"name": "name",
+					"datatype": "varchar",
+					"param": "255",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "b7d5a927-3dff-4bd0-88e4-0ff0a8a31b93",
+					"name": "email",
+					"datatype": "varchar",
+					"param": "255",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "292f71ec-dd40-45fc-9b1d-e71bf1ebd5dc",
+					"name": "addresses_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"param": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				}
+			],
+			"relations": [
+				"e39ea468-cad5-488a-a0c6-2cb4b58270fa",
+				"a1fe53b4-caf6-4d42-9bfa-9a56fe64c38d"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "8bba4016-5f0a-4093-855a-0e4d44a59b1d",
+					"name": "users_pkey",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "59e079c1-01db-4dd5-96dd-55964b256a3d",
+							"colid": "65b27b75-46d7-4716-beac-371de3bc7e6c"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": "",
+				"tablespace": "",
+				"inherits": "",
+				"storageParameters": "",
+				"partition": "",
+				"partitionNames": []
+			}
+		},
+		"9dc3c0bd-0831-4145-9ec9-31a5e69bfa09": {
+			"id": "9dc3c0bd-0831-4145-9ec9-31a5e69bfa09",
+			"visible": true,
+			"name": "certificates",
+			"desc": "Hier werden die Ausweise gespeichert, diese Tabelle gehört zum Kerngeschäft (https://online-energieausweis.org)",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "2be09433-16c9-40f7-9947-5e1c9c06f1e7",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"param": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "6abb6a91-8f63-4695-8f56-9bfe23732fbf",
+					"name": "uid",
+					"datatype": "varchar",
+					"param": "36",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "285f8e0a-0cff-4ffb-b27b-f8dab508ff2d",
+					"name": "users_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"param": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "cc0a9eb4-f941-4351-b006-ec40f452f0d5",
+					"name": "addresses_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"param": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				}
+			],
+			"relations": [
+				"e39ea468-cad5-488a-a0c6-2cb4b58270fa",
+				"658ecaea-c577-40f5-9628-a40021420b92"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "1419ca16-8d9b-413d-a318-6c00c8f9afb5",
+					"name": "certificates_pkey",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "f4c2d208-0fa4-4342-a6c1-bd5db43cff87",
+							"colid": "2be09433-16c9-40f7-9947-5e1c9c06f1e7"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": "",
+				"tablespace": "",
+				"inherits": "",
+				"storageParameters": "",
+				"partition": "",
+				"partitionNames": []
+			}
+		},
+		"a91fc1f2-8be2-45af-bac7-ccbd4775f81d": {
+			"id": "a91fc1f2-8be2-45af-bac7-ccbd4775f81d",
+			"visible": true,
+			"name": "addresses",
+			"desc": "Alle Adressen, ein Nutzer kann mehrere Adressen haben welche ebenfalls zu einem Ausweis zugewiesen werden können. Sobald die Adresse einem Ausweis zugewiesen wurde, kann sie nicht mehr verändert werden.",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "dd8d6afc-b1e2-4071-a815-c646b2342f69",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"param": "",
+					"list": false,
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "7e02c54e-7649-4c9d-9460-2309dfd2a7ee",
+					"name": "uid",
+					"datatype": "varchar",
+					"param": "36",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "cb7fcc6a-9e73-4805-b638-daaa9b76dffd",
+					"name": "street",
+					"datatype": "varchar",
+					"param": "255",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "7b673341-72cb-46e6-badf-2d2020d67d65",
+					"name": "zip",
+					"datatype": "varchar",
+					"param": "8",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "62b92451-9ae6-457f-80d5-682306de197d",
+					"name": "city",
+					"datatype": "varchar",
+					"param": "255",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "baecc4ba-315a-4959-8492-bb5edb0dad02",
+					"name": "country",
+					"datatype": "varchar",
+					"param": "5",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"estimatedSize": "",
+					"binary": false
+				},
+				{
+					"id": "86a64d4f-231f-4c91-94e1-e7e8eb4085a8",
+					"name": "number",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"estimatedSize": "",
+					"binary": false
+				}
+			],
+			"relations": [
+				"658ecaea-c577-40f5-9628-a40021420b92",
+				"a1fe53b4-caf6-4d42-9bfa-9a56fe64c38d"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "abe04075-c809-4f47-89e1-ae5e19e7d594",
+					"name": "addresses_pkey",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "aeaed5c0-4b9d-4ed8-80f7-8eafad917dcf",
+							"colid": "dd8d6afc-b1e2-4071-a815-c646b2342f69"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": "",
+				"tablespace": "",
+				"inherits": "",
+				"storageParameters": "",
+				"partition": "",
+				"partitionNames": []
+			}
+		}
+	},
+	"relations": {
+		"e39ea468-cad5-488a-a0c6-2cb4b58270fa": {
+			"id": "e39ea468-cad5-488a-a0c6-2cb4b58270fa",
+			"visible": true,
+			"name": "certificates_users_id_fkey",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "8bba4016-5f0a-4093-855a-0e4d44a59b1d",
+			"parent": "c3f94e01-c64b-4c5d-9cbd-e4ff176bbb13",
+			"child": "9dc3c0bd-0831-4145-9ec9-31a5e69bfa09",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "5c9da9a9-431f-4803-95bb-77f057a71dff",
+					"parentcol": "65b27b75-46d7-4716-beac-371de3bc7e6c",
+					"childcol": "285f8e0a-0cff-4ffb-b27b-f8dab508ff2d"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"658ecaea-c577-40f5-9628-a40021420b92": {
+			"id": "658ecaea-c577-40f5-9628-a40021420b92",
+			"visible": true,
+			"name": "certificates_addresses_id_fkey",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "abe04075-c809-4f47-89e1-ae5e19e7d594",
+			"parent": "a91fc1f2-8be2-45af-bac7-ccbd4775f81d",
+			"child": "9dc3c0bd-0831-4145-9ec9-31a5e69bfa09",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "0abed2fc-595c-4180-b0c1-e206c14ea345",
+					"parentcol": "dd8d6afc-b1e2-4071-a815-c646b2342f69",
+					"childcol": "cc0a9eb4-f941-4351-b006-ec40f452f0d5"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"a1fe53b4-caf6-4d42-9bfa-9a56fe64c38d": {
+			"id": "a1fe53b4-caf6-4d42-9bfa-9a56fe64c38d",
+			"visible": true,
+			"name": "users_addresses_id_fkey",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "abe04075-c809-4f47-89e1-ae5e19e7d594",
+			"parent": "a91fc1f2-8be2-45af-bac7-ccbd4775f81d",
+			"child": "c3f94e01-c64b-4c5d-9cbd-e4ff176bbb13",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "4f7638c2-38c8-4799-a072-bf4c85df59cd",
+					"parentcol": "dd8d6afc-b1e2-4071-a815-c646b2342f69",
+					"childcol": "292f71ec-dd40-45fc-9b1d-e71bf1ebd5dc"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		}
+	},
+	"notes": {},
+	"lines": {},
+	"model": {
+		"name": "IBCornelsen Main Database",
+		"id": "22eb6b50-bd01-465e-ba8f-3e72b2f4c687",
+		"activeDiagram": "93ba063e-903c-45ff-bc02-b9213c073b54",
+		"desc": "",
+		"path": "",
+		"type": "PG",
+		"version": 1,
+		"parentTableInFkCols": true,
+		"caseConvention": "under",
+		"replaceSpace": "_",
+		"color": "transparent",
+		"sideSelections": true,
+		"isDirty": true,
+		"storedin": {
+			"major": 6,
+			"minor": 1,
+			"extra": 0
+		},
+		"embeddedInParentsIsDisplayed": true,
+		"schemaContainerIsDisplayed": false,
+		"cardinalityIsDisplayed": false,
+		"estimatedSizeIsDisplayed": false,
+		"writeFileParam": false,
+		"currentDisplayMode": "metadata",
+		"def_coltopk": true,
+		"pg": {
+			"schema": ""
+		},
+		"sqlSettings": {
+			"wrapLines": true,
+			"wrapOffset": 80,
+			"indent": true,
+			"indentationString": "spaces",
+			"indentationSize": 2,
+			"limitItemsOnLine": true,
+			"maxListItemsOnLine": 3,
+			"statementDelimiter": ";",
+			"routineDelimiter": ";",
+			"keywordCase": "upper",
+			"identiferCase": "original",
+			"includeSchema": "always",
+			"quotation": "if_needed",
+			"includeGeneratedNames": "always"
+		},
+		"nameAutoGeneration": {
+			"keys": true,
+			"indexes": true,
+			"relations": true
+		},
+		"lastSaved": "Mon Mar 27 2023 16:24:37 GMT+0400 (Georgia Standard Time)"
+	},
+	"otherObjects": {},
+	"diagrams": {
+		"93ba063e-903c-45ff-bc02-b9213c073b54": {
+			"name": "Main Diagram",
+			"description": "",
+			"id": "93ba063e-903c-45ff-bc02-b9213c073b54",
+			"keysgraphics": true,
+			"linegraphics": "detailed",
+			"zoom": 1,
+			"background": "transparent",
+			"lineColor": "transparent",
+			"isOpen": true,
+			"main": true,
+			"diagramItems": {
+				"c3f94e01-c64b-4c5d-9cbd-e4ff176bbb13": {
+					"referencedItemId": "c3f94e01-c64b-4c5d-9cbd-e4ff176bbb13",
+					"x": 224,
+					"y": 34,
+					"gHeight": 117,
+					"gWidth": 210,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"9dc3c0bd-0831-4145-9ec9-31a5e69bfa09": {
+					"referencedItemId": "9dc3c0bd-0831-4145-9ec9-31a5e69bfa09",
+					"x": 668,
+					"y": 177,
+					"gHeight": 99,
+					"gWidth": 210,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"a91fc1f2-8be2-45af-bac7-ccbd4775f81d": {
+					"referencedItemId": "a91fc1f2-8be2-45af-bac7-ccbd4775f81d",
+					"x": 235,
+					"y": 329,
+					"gHeight": 153,
+					"gWidth": 198,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				}
+			},
+			"scroll": {
+				"x": 0,
+				"y": 0
+			},
+			"type": "erd"
+		}
+	},
+	"order": [
+		"a91fc1f2-8be2-45af-bac7-ccbd4775f81d",
+		"9dc3c0bd-0831-4145-9ec9-31a5e69bfa09",
+		"c3f94e01-c64b-4c5d-9cbd-e4ff176bbb13",
+		"e39ea468-cad5-488a-a0c6-2cb4b58270fa",
+		"658ecaea-c577-40f5-9628-a40021420b92",
+		"a1fe53b4-caf6-4d42-9bfa-9a56fe64c38d"
+	],
+	"collapsedTreeItems": [],
+	"reverseStats": {}
+}
